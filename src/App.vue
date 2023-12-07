@@ -7,5 +7,9 @@ import HeaderArea from '../src/components/HeaderArea.vue';
 </template>
 
 <style lang="scss">
-@use "./partials/variables.scss" as*;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 </style>
