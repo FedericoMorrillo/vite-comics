@@ -75,7 +75,8 @@ export default {
     </header>
 </template>
 
-<style lang="scss">
+       <!--specifichiamo l' utilizzo di scss-->
+<style scoped lang="scss">
 //utils
 .flex {
     display: flex;

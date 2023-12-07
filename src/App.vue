@@ -1,9 +1,11 @@
 <script setup>
-import HeaderArea from '../src/components/HeaderArea.vue';
+import HeaderArea from './components/HeaderArea.vue';
+import MainArea from './components/MainArea.vue';
 </script>
 
 <template>
   <HeaderArea />
+  <MainArea />
 </template>
 
 <style lang="scss">
