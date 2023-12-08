@@ -110,6 +110,29 @@ export default {
                     link: "#",
                 },
             ],
+            socialIcon: [
+                {
+                    img: "../src/assets/footer-facebook.png",
+                    name: "facebook",
+                },
+                {
+                    img: "../src/assets/footer-twitter.png",
+                    name: "twitter",
+                },
+                {
+                    img: "../src/assets/footer-youtube.png",
+                    name: "youtube",
+                },
+                {
+                    img: "../src/assets/footer-pinterest.png",
+                    name: "pinterest",
+                },
+                {
+                    img: "../src/assets/footer-periscope.png",
+                    name: "periscope",
+                },
+
+            ],
         }
     }
 }
@@ -176,7 +199,33 @@ export default {
 
         <!--/sezione link utili e informazioni-->
 
+        <!--sezione social-->
 
+        <!--background-->
+        <div class="social">
+            <!--/background-->
+
+            <div class="container-social flex">
+
+                <!--button-->
+                <button class="sign-btn">
+                    <a href="">SIGN-NOW!</a>
+                </button>
+                <!--/button-->
+
+                <!--follow us section-->
+                <div class=" align flex">
+                    <h3 class="follow-us">
+                        FOLLOW US
+                    </h3>
+                    <button class="icon" v-for="icon in socialIcon">
+                        <img :src="icon.img" :alt="icon.name">
+                    </button>
+                </div>
+                <!--/follow us section-->
+            </div>
+        </div>
+        <!--/sezione social-->
 
     </footer>
     <!--/background di sfondo-->
@@ -188,6 +237,10 @@ export default {
     display: flex;
 }
 
+.align {
+    align-items: center;
+}
+
 //utils
 
 footer {
@@ -197,11 +250,11 @@ footer {
 
     //contenitore
     .container {
-        height: 23.125rem;
         max-width: 81.25rem;
         width: 80%;
         margin: 0 auto;
         justify-content: space-between;
+        position: relative;
 
         //contenitore links
         .box {
@@ -219,12 +272,12 @@ footer {
                 li {
 
                     list-style: none;
-                    padding-bottom: .1875rem;
+                    padding: .1875rem 0;
 
                     a {
                         text-decoration: none;
                         color: #887a7c;
-                        font-size: .75rem;
+                        font-size: .875rem;
 
                         &:hover {
                             color: white;
@@ -239,10 +292,11 @@ footer {
         //background logo
         .bg-image {
             width: 35.2rem;
-            height: 29.375rem;
+            height: 35rem;
             background-image: url("../assets/dc-logo-bg.png");
-            position: relative;
+            position: absolute;
             top: -100px;
+            right: 0;
         }
 
         //background logo
@@ -250,6 +304,54 @@ footer {
 
     //contenitore
 
+    //social
+    .social {
+        background-color: #303030;
+        position: relative;
+        z-index: 1;
 
+        .container-social {
+            max-width: 81.25rem;
+            width: 80%;
+            margin: 0 auto;
+            justify-content: space-between;
+
+            .sign-btn {
+                height: 3.125rem;
+                width: 8.75rem;
+                border: 2px solid #0282f9;
+                margin: 1.875rem 0;
+                background-color: #303030;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+            }
+
+            h3 {
+                color: #0282f9;
+            }
+
+            .icon {
+                width: 2.1875rem;
+                height: 2.1875rem;
+                margin-left: 1.25rem;
+                background-color: #303030;
+                border: none;
+
+                img {
+                    width: 100%;
+                }
+
+            }
+
+        }
+
+
+    }
+
+    //social
 }
 </style>

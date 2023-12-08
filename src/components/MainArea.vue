@@ -37,6 +37,7 @@ export default {
         <!--primo contenitore-->
         <div class="container flex">
             <h1>{{ content }}</h1>
+
         </div>
         <!--/primo contenitore-->
 
@@ -79,7 +80,10 @@ main {
         max-width: 81.25rem;
         width: 80%;
         margin: 0 auto;
+
+        //***ho importato l altezza per riprodurlo fedele all immagine ma non inserendola il contenitore cresce in base al contenuto */
         height: 8.125rem;
+
         align-items: center;
     }
 
@@ -92,6 +96,8 @@ main {
         height: 150px;
         justify-content: center;
         margin: 0 auto;
+        position: relative;
+        z-index: 1;
 
         //button
         .btn {
