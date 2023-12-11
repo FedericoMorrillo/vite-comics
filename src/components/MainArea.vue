@@ -1,5 +1,9 @@
 <script>
+import Series from "./Series.vue";
 export default {
+    components: {
+        Series,
+    },
     data() {
         return {
             // array info bar
@@ -25,8 +29,8 @@ export default {
                     desc: "DC POWER VISA",
                 },
             ]
-        }
-    }
+        };
+    },
 };
 </script>
 
@@ -43,6 +47,10 @@ export default {
             </h3>
             <!--/current series-->
         </div>
+
+        <!--componente-->
+        <Series />
+        <!--/componente-->
 
         <div class="center flex">
             <!--load more button-->
@@ -116,7 +124,7 @@ main {
 
     //load more
     .add-btn {
-        margin: 3.125rem 0 1.25rem 0;
+        margin: 1.25rem 0;
         padding: .625rem 3.75rem;
         background-color: #0282f9;
         color: white;
