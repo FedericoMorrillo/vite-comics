@@ -44,6 +44,10 @@ export default {
                     link: "#",
                 },
             ],
+            jumbo: {
+                img: "../src/assets/jumbotron.jpg",
+                name: "jumbotron",
+            }
         }
     }
 };
@@ -74,6 +78,7 @@ export default {
 
         <!--jumbo-->
         <div class="jumbo">
+            <img :src="jumbo.img" :alt="jumbo.name">
         </div>
         <!--/jumbo-->
     </header>
@@ -147,14 +152,16 @@ header {
     //contenitore
 }
 
+//jumbotron img
 .jumbo {
     height: 25rem;
-    background-image: url(" ./src/assets/jumbotron.jpg");
-
+    overflow: hidden;
 
     img {
         width: 100%;
-        height: 100%;
+        object-fit: cover;
     }
 }
+
+//jumbotron img
 </style>

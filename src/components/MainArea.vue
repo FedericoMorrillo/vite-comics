@@ -2,7 +2,6 @@
 export default {
     data() {
         return {
-            content: "__>Content goes here<__",
             // array info bar
             DcInformations: [
                 {
@@ -34,10 +33,23 @@ export default {
 <template>
     <main>
 
+
         <!--primo contenitore-->
         <div class="container flex">
-            <h1>{{ content }}</h1>
 
+            <!--current series-->
+            <h3 class="tag-series">
+                CURRENT SERIES
+            </h3>
+            <!--/current series-->
+        </div>
+
+        <div class="center flex">
+            <!--load more button-->
+            <button class="add-btn">
+                <h4>LOAD MORE</h4>
+            </button>
+            <!--/load more button-->
         </div>
         <!--/primo contenitore-->
 
@@ -71,9 +83,16 @@ export default {
     display: flex;
 }
 
+.center {
+    justify-content: center;
+}
+
 main {
     color: white;
     background-color: #1c1c1c;
+    position: relative;
+
+
 
     //main content
     .container {
@@ -81,7 +100,32 @@ main {
         width: 80%;
         margin: 0 auto;
         align-items: center;
+
+        //current series
+        .tag-series {
+            padding: .625rem 1.875rem;
+            position: absolute;
+            top: -1.25rem;
+            cursor: default;
+            background-color: #0282f9;
+            text-align: center;
+        }
+
+        //current series
     }
+
+    //load more
+    .add-btn {
+        margin: 3.125rem 0 1.25rem 0;
+        padding: .625rem 3.75rem;
+        background-color: #0282f9;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    //load more
+
 
     //main content
 
