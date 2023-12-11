@@ -80,10 +80,6 @@ main {
         max-width: 81.25rem;
         width: 80%;
         margin: 0 auto;
-
-        //***ho importato l altezza per riprodurlo fedele all immagine ma non inserendola il contenitore cresce in base al contenuto */
-        height: 8.125rem;
-
         align-items: center;
     }
 
@@ -91,9 +87,9 @@ main {
 
     //info bar
     .info-bar {
+        padding: 50px 0;
         font-size: 12px;
         background-color: #0282f9;
-        height: 150px;
         justify-content: center;
         margin: 0 auto;
         position: relative;

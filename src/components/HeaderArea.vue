@@ -43,7 +43,7 @@ export default {
                     name: "SHOP",
                     link: "#",
                 },
-            ]
+            ],
         }
     }
 };
@@ -72,6 +72,10 @@ export default {
         </div>
         <!--/contenitore header-->
 
+        <!--jumbo-->
+        <div class="jumbo">
+        </div>
+        <!--/jumbo-->
     </header>
 </template>
 
@@ -85,7 +89,6 @@ export default {
 //utils
 
 header {
-    height: 120px;
     background-color: white;
 
     //contenitore
@@ -97,7 +100,6 @@ header {
     .container {
         max-width: 81.25rem;
         width: 80%;
-        height: 100%;
         margin: 0 auto;
         justify-content: space-between;
         align-items: center;
@@ -115,16 +117,14 @@ header {
         //logo
 
         //nav
-        ul {
-            height: 100%;
-        }
-
         li {
             font-size: 12px;
             font-weight: 600;
             list-style: none;
             margin: 0 .9375rem 0 .9375rem;
             align-items: center;
+            padding: 3.125rem 0 2.8125rem 0;
+            border-bottom: 5px solid white;
 
             &:hover {
                 cursor: pointer;
@@ -145,5 +145,16 @@ header {
     }
 
     //contenitore
+}
+
+.jumbo {
+    height: 25rem;
+    background-image: url(" ./src/assets/jumbotron.jpg");
+
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
 </style>
